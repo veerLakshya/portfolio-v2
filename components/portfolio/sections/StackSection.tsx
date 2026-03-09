@@ -1,6 +1,6 @@
 import { stackLayers } from "../data";
 import { StackCell } from "../cards/StackCell";
-import { SectionLabel } from "../ui/SectionLabel";
+import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function StackSection() {
   return (

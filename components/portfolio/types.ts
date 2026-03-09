@@ -16,15 +16,11 @@ export type Experience = {
   period: string;
   role: string;
   company: string;
+  companyUrl: string;
   details: string;
 };
 
 export type ValueItem = {
   title: string;
   text: string;
-};
-
-export type NavLink = {
-  href: string;
-  label: string;
 };

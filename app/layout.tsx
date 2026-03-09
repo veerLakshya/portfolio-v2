@@ -3,8 +3,8 @@ import { LenisProvider } from "@/components/providers/LenisProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alex Chen | Full-stack Developer",
-  description: "Portfolio of Alex Chen, full-stack engineer.",
+  title: "Lakshya Veer Singh | Software Engineer",
+  description: "Portfolio of Lakshya Veer Singh, software engineer.",
 };
 
 export default function RootLayout({

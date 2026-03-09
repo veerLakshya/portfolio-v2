@@ -1,12 +1,4 @@
-import type { Experience, NavLink, Project, StackLayer, ValueItem } from "./types";
-
-export const navLinks: NavLink[] = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Work" },
-  { href: "#stack", label: "Stack" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-];
+import type { Experience, Project, StackLayer, ValueItem } from "./types";
 
 export const projects: Project[] = [
   {
@@ -74,36 +66,16 @@ export const values: ValueItem[] = [
   {
     title: "Intuitive.",
     text: "Bridging the gap between complex logic and simple, human interfaces.",
-  },
+  }
 ];
 
 export const experience: Experience[] = [
   {
-    period: "2022 — PRES",
-    role: "Senior Eng.",
-    company: "Vercel",
+    period: "Jun 2025 — PRES",
+    role: "Frontend Intern",
+    company: "Flam AI",
+    companyUrl: "https://flamapp.ai",
     details:
-      "Leading the core platform team. Re-architected the edge deployment pipeline and reduced build times by 40%.",
-  },
-  {
-    period: "2020 — 2022",
-    role: "Frontend Lead",
-    company: "Shopify",
-    details:
-      "Spearheaded the migration to Hydrogen framework. Managed a team of 5 developers delivering key merchant features.",
-  },
-  {
-    period: "2018 — 2020",
-    role: "Developer",
-    company: "Meta (Reality Labs)",
-    details:
-      "Prototyped internal tools for AR interfaces. Built high-performance dashboards for hardware telemetry.",
-  },
-  {
-    period: "2016 — 2018",
-    role: "Junior Dev",
-    company: "Huge Inc.",
-    details:
-      "Agency work for Fortune 500 clients. Creative coding, animation implementation, and accessible UI development.",
+      "Part of the core platform team. Re-architected multiple dashboards integrating AI-driven pipelines.",
   },
 ];

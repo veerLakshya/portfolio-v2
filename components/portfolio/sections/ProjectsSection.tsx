@@ -1,6 +1,6 @@
 import { projects } from "../data";
 import { ProjectCard } from "../cards/ProjectCard";
-import { SectionLabel } from "../ui/SectionLabel";
+import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function ProjectsSection() {
   return (

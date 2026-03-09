@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Experience } from "../types";
 
 type ExperienceRowProps = {
@@ -16,7 +17,7 @@ export function ExperienceRow({ item, isLast }: ExperienceRowProps) {
       <p className="font-mono text-sm text-[#d4b895]/80">{item.period}</p>
       <h3 className="text-[24px] leading-[1.1] tracking-[-0.03em]">{item.role}</h3>
       <p className="text-base leading-7 text-white/70">
-        <strong className="font-semibold text-white">{item.company}</strong> - {item.details}
+        <Link href={item?.companyUrl} target="_blank" rel="noopener noreferrer"> <strong className="font-semibold text-white">{item.company}</strong> </Link>- {item.details}
       </p>
     </article>
   );

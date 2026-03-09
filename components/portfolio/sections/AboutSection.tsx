@@ -1,5 +1,5 @@
 import { values } from "../data";
-import { SectionLabel } from "../ui/SectionLabel";
+import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function AboutSection() {
   return (
@@ -10,11 +10,10 @@ export function AboutSection() {
           <h2 className="mb-8 text-4xl leading-[1.1] tracking-[-0.03em] lg:text-5xl">
             Engineer by trade,
             <br />
-            designer by heart.
+            Problem solver by heart.
           </h2>
           <p className="max-w-[680px] text-lg leading-8 text-white/70">
-            I don&apos;t just write code; I build systems. Navigating the complexity of modern web
-            development requires more than syntax, it requires structure, intuition, and a
+            I don&apos;t just write code; I build systems. Navigating the complexity of modern software engineering requires more than syntax, it requires structure, intuition, and a
             relentless focus on the user experience.
           </p>
         </div>

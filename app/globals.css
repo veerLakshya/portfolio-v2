@@ -41,6 +41,18 @@ html.lenis body {
   }
 }
 
+@keyframes contactPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .fade-in {
   animation: fadeIn 1.2s ease-out forwards;
   opacity: 0;
@@ -57,4 +69,8 @@ html.lenis body {
 
 .delay-3 {
   animation-delay: 0.6s;
+}
+
+.contact-pulse {
+  animation: contactPulse 2s infinite;
 }

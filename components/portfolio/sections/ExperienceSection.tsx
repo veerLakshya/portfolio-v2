@@ -1,6 +1,6 @@
 import { experience } from "../data";
 import { ExperienceRow } from "../cards/ExperienceRow";
-import { SectionLabel } from "../ui/SectionLabel";
+import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function ExperienceSection() {
   return (

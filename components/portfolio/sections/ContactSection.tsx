@@ -1,4 +1,4 @@
-import { PillButton } from "../ui/PillButton";
+import { PillButton } from "@/components/shared/PillButton";
 
 export function ContactSection() {
   return (
@@ -12,7 +12,7 @@ export function ContactSection() {
         future.
       </p>
       <div className="flex flex-wrap gap-5">
-        <PillButton href="mailto:hello@alexchen.dev">Get in touch</PillButton>
+        <PillButton href="/contact-me">Get in touch</PillButton>
         <PillButton href="#" secondary>
           Download CV
         </PillButton>
