@@ -5,13 +5,8 @@ import { Container } from "@/components/shared/Container";
 import { PageShell } from "@/components/shared/PageShell";
 import { PillButton } from "@/components/shared/PillButton";
 import { SectionLabel } from "@/components/shared/SectionLabel";
-import { SiteNav, type SiteNavItem } from "@/components/shared/SiteNav";
-
-const blogNavLinks: SiteNavItem[] = [
-  { href: "/", label: "Home" },
-  { href: "/blogs", label: "Blogs" },
-  { href: "/contact-me", label: "Contact Me" },
-];
+import { SiteNav } from "@/components/shared/SiteNav";
+import { blogNavLinks } from "@/constants/navbar";
 
 export function BlogsPage() {
   return (
