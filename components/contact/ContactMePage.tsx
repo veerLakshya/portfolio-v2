@@ -6,17 +6,19 @@ import { PillButton } from "@/components/shared/PillButton";
 export function ContactMePage() {
   return (
     <PageShell overlayOpacity={0.92} className="lg:h-screen lg:overflow-hidden">
-      <BrandMark className="absolute top-10 left-5 z-20 sm:left-10 xl:left-20" />
+      <header className="fixed top-0 left-0 z-[110] flex w-full items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
+        <BrandMark />
 
-      <Link
-        href="/"
-        className="absolute top-10 right-5 z-20 flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white sm:right-10"
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M18 6L6 18M6 6l12 12" />
-        </svg>
-        CLOSE
-      </Link>
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+          CLOSE
+        </Link>
+      </header>
 
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         <section className="flex flex-col justify-between border-r-0 border-white/15 px-5 pb-10 pt-28 sm:px-10 lg:border-r lg:px-20 lg:pb-20 lg:pt-20">

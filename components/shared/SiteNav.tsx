@@ -30,11 +30,11 @@ export function SiteNav({
   return (
     <nav
       className={[
-        "fixed top-0 left-0 z-[100] w-full ",
+        "fixed top-0 left-0 z-[100] w-full",
         blendOverlay ? "mix-blend-overlay" : "",
       ].join(" ")}
     >
-      <div className="flex items-center justify-between px-5 py-5 sm:px-10 sm:py-6 xl:px-20">
+      <div className="flex items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
         <BrandMark />
 
         <div className="hidden gap-8 md:flex">

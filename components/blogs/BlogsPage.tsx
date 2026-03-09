@@ -16,7 +16,12 @@ const blogNavLinks: SiteNavItem[] = [
 export function BlogsPage() {
   return (
     <PageShell overlayOpacity={0.9}>
-      <SiteNav links={blogNavLinks} activeHref="/blogs" ctaHref="/contact-me" ctaLabel="Contact Me" />
+      <SiteNav
+        links={blogNavLinks}
+        activeHref="/blogs"
+        ctaHref="/contact-me"
+        ctaLabel="Contact Me"
+      />
 
       <Container className="pb-24 pt-[180px]">
         <SectionLabel>Editorial / Insights</SectionLabel>
@@ -31,7 +36,9 @@ export function BlogsPage() {
             <h1 className="mb-6 text-[40px] leading-[1.1] tracking-[-0.03em] lg:text-[64px]">
               {featuredPost.title}
             </h1>
-            <p className="mb-8 text-lg leading-8 text-white/70">{featuredPost.description}</p>
+            <p className="mb-8 text-lg leading-8 text-white/70">
+              {featuredPost.description}
+            </p>
             <PillButton href="#">Read full article</PillButton>
           </div>
 
@@ -80,8 +87,12 @@ export function BlogsPage() {
 
       <Container className="pb-16">
         <footer className="flex items-center justify-between border-t border-white/15 pt-10">
-          <div className="text-xl font-semibold tracking-[-0.02em] opacity-50">ALEX CHEN</div>
-          <p className="font-mono text-xs text-white/70">© 2024 / ARCHITECTING DIGITAL EXPERIENCES</p>
+          <div className="text-xl font-semibold tracking-[-0.02em] opacity-50">
+            LAKSHYA
+          </div>
+          <p className="font-mono text-xs text-white/70">
+            © 2024 / ARCHITECTING DIGITAL EXPERIENCES
+          </p>
         </footer>
       </Container>
     </PageShell>
