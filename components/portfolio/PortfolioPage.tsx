@@ -10,12 +10,12 @@ import { homeNavLinks } from "@/constants/navbar";
 
 export function PortfolioPage() {
   return (
-    <PageShell>
+    <PageShell bgIndex={1} bgCover={true}>
       <SiteNav
         links={homeNavLinks}
         activeHref="/"
-        ctaHref="/contact-me"
-        ctaLabel="Contact Me"
+        // ctaHref="/contact-me"
+        // ctaLabel="Contact Me"
       />
       <HeroSection />
       <AboutSection />

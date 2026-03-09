@@ -1,6 +1,7 @@
 import React from "react";
 import { socials } from "@/constants/socials";
 import Link from "next/link";
+import { Time } from "./info";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           Current Location
         </p>
         <p className="text-base">Bangalore, India</p>
-        <p className="mt-1 text-[13px] text-white/40">
-          10:42 AM IST (UTC+5:30)
-        </p>
+        <div className="mt-1 text-[13px] text-white/40">UTC+5:30</div>
       </div>
 
       <div>

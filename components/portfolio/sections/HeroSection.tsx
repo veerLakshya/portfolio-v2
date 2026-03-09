@@ -3,7 +3,7 @@ import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function HeroSection() {
   return (
-    <section className="mx-auto grid min-h-screen w-full max-w-[1400px] items-center px-5 pt-24 sm:px-10 xl:px-20">
+    <section className="mx-auto grid min-h-screen w-full max-w-[1400px] items-center px-5 pt-24 2xl:pt-0 sm:px-10 xl:px-20">
       <div className="grid w-full gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end lg:gap-[60px]">
         <div>
           <SectionLabel className="fade-in">Software Engineer</SectionLabel>
@@ -15,7 +15,8 @@ export function HeroSection() {
         </div>
         <div className="fade-in delay-2 pb-3">
           <p className="mb-8 max-w-[400px] text-lg leading-8 text-white/70">
-            Architecting ideas with precision, performance, and purpose. From just a thought to a fully functional product, I bring ideas to life.
+            Architecting ideas with precision, performance, and purpose. From
+            just a thought to a fully functional product, I bring ideas to life.
           </p>
           <div className="flex flex-wrap gap-5">
             <PillButton href="#projects">View Projects</PillButton>

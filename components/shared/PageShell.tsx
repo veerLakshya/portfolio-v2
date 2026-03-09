@@ -1,28 +1,41 @@
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 type PageShellProps = {
+  bgIndex?: number;
   children: ReactNode;
+  fixedBg?: boolean;
+  bgCover?: boolean;
   overlayOpacity?: number;
   className?: string;
 };
 
 const bgImages = ["clouds-2.jpg", "clouds-image.avif"];
 
-const randomIndex = Math.floor(Math.random() * bgImages.length);
-
 export function PageShell({
   children,
   overlayOpacity = 0.85,
+  bgIndex = 0,
   className = "",
+  fixedBg = false,
+  bgCover = false,
 }: PageShellProps) {
-  const BACKGROUND_IMAGE = bgImages[randomIndex];
+  if (bgIndex < 0 || bgIndex >= bgImages.length) {
+    bgIndex = 0;
+  }
+  const BACKGROUND_IMAGE = bgImages[bgIndex];
   console.log("Selected background image:", BACKGROUND_IMAGE);
   return (
     <main
-      className={[
-        "relative min-h-screen overflow-x-hidden bg-[#1a262b] font-sans text-white [background-attachment:fixe] [background-position:center] [background-size:cover]",
+      className={cn(
+        "relative min-h-screen overflow-x-hidden bg-[#1a262b] font-sans text-white",
+        fixedBg ? "[background-attachment:fixed]" : "",
+        bgCover
+          ? "[background-position:center]"
+          : "[background-position:cover]",
+        "[background-size:cover]",
         className,
-      ].join(" ")}
+      )}
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(26, 38, 43, ${overlayOpacity}) 0%, rgba(66, 52, 40, ${
           overlayOpacity

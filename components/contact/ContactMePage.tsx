@@ -2,11 +2,18 @@ import { BrandMark } from "@/components/shared/BrandMark";
 import { PageShell } from "@/components/shared/PageShell";
 import { PillButton } from "@/components/shared/PillButton";
 import Footer from "../shared/Footer";
+import { SiteNav } from "../shared/SiteNav";
+import { homeNavLinks } from "@/constants/navbar";
 
 export function ContactMePage() {
   return (
-    <PageShell overlayOpacity={0.92} className="lg:h-screen lg:overflow-hidden">
-      <header className="fixed top-0 left-0 z-[110] flex w-full items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
+    <PageShell
+      overlayOpacity={0.92}
+      className="lg:h-screen lg:overflow-hidden"
+      bgCover={true}
+      bgIndex={0}
+    >
+      {/* <header className="fixed top-0 left-0 z-[110] flex w-full items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
         <BrandMark />
 
         <PillButton
@@ -25,7 +32,8 @@ export function ContactMePage() {
           </svg>
           CLOSE
         </PillButton>
-      </header>
+      </header> */}
+      <SiteNav hideLinks activeHref="/contact" links={homeNavLinks} />
 
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         <section className="flex flex-col justify-between border-r-0 border-white/15 px-5 pb-10 pt-28 sm:px-10 lg:border-r lg:px-20 lg:pb-20 lg:pt-20">

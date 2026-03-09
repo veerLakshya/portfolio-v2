@@ -5,21 +5,20 @@ import Link from "next/link";
 import { BrandMark } from "./BrandMark";
 import { PillButton } from "./PillButton";
 import { SiteNavItem } from "@/types/navbar";
+import { Time } from "./info";
 
 type SiteNavProps = {
-  links: SiteNavItem[];
+  links?: SiteNavItem[];
   activeHref?: string;
-  ctaHref?: string;
-  ctaLabel?: string;
   blendOverlay?: boolean;
+  hideLinks?: boolean;
 };
 
 export function SiteNav({
   links,
   activeHref,
-  ctaHref = "#contact",
-  ctaLabel = "View Resume",
   blendOverlay = false,
+  hideLinks = false,
 }: SiteNavProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,28 +33,30 @@ export function SiteNav({
         <BrandMark />
 
         <div className="hidden gap-8 md:flex">
-          {links.map((link) => {
-            const isActive = activeHref === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={[
-                  "text-sm transition-colors",
-                  isActive ? "text-white" : "text-white/70 hover:text-white",
-                ].join(" ")}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+          {!hideLinks &&
+            links?.map((link) => {
+              const isActive = activeHref === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={[
+                    "text-sm transition-colors",
+                    isActive ? "text-white" : "text-white/70 hover:text-white",
+                  ].join(" ")}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
         </div>
 
         <div className="hidden md:block">
-          <PillButton className="border-none" href={ctaHref}>
+          {/* <PillButton className="border-none" href={ctaHref}>
             {ctaLabel}
-          </PillButton>
+          </PillButton> */}
+          <Time className="w-20" />
         </div>
 
         <button
@@ -94,7 +95,7 @@ export function SiteNav({
       {isMenuOpen ? (
         <div className="border-t border-white/10 bg-[#1a262b]/95 px-5 py-4 backdrop-blur-md md:hidden sm:px-10">
           <div className="flex flex-col gap-3">
-            {links.map((link) => {
+            {links?.map((link) => {
               const isActive = activeHref === link.href;
               return (
                 <Link
@@ -110,13 +111,13 @@ export function SiteNav({
                 </Link>
               );
             })}
-            <PillButton
+            {/* <PillButton
               href={ctaHref}
               className="mt-3 w-fit border-0"
               onClick={() => setIsMenuOpen(false)}
             >
               {ctaLabel}
-            </PillButton>
+            </PillButton> */}
           </div>
         </div>
       ) : null}

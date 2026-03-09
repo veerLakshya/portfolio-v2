@@ -1,4 +1,4 @@
-import { experience } from "../data";
+import { myExperience } from "@/constants/experience";
 import { ExperienceRow } from "../cards/ExperienceRow";
 import { SectionLabel } from "@/components/shared/SectionLabel";
 
@@ -10,8 +10,12 @@ export function ExperienceSection() {
     >
       <SectionLabel>Professional History</SectionLabel>
       <div>
-        {experience.map((item, index) => (
-          <ExperienceRow key={item.company} item={item} isLast={index === experience.length - 1} />
+        {myExperience.map((item, index) => (
+          <ExperienceRow
+            key={item.company}
+            item={item}
+            isLast={index === myExperience.length - 1}
+          />
         ))}
       </div>
     </section>

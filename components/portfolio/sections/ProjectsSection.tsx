@@ -1,4 +1,4 @@
-import { projects } from "../data";
+import { projects } from "@/constants";
 import { ProjectCard } from "../cards/ProjectCard";
 import { SectionLabel } from "@/components/shared/SectionLabel";
 

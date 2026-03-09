@@ -1,4 +1,4 @@
-import type { Project } from "../types";
+import type { Project } from "../../../types/types";
 
 type ProjectCardProps = {
   project: Project;
@@ -11,8 +11,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.id}
       </div>
       <div>
-        <h3 className="text-[32px] leading-[1.1] tracking-[-0.03em]">{project.title}</h3>
-        <p className="mt-4 max-w-[340px] text-sm leading-7 text-white/70">{project.description}</p>
+        <h3 className="text-[32px] leading-[1.1] tracking-[-0.03em]">
+          {project.title}
+        </h3>
+        <p className="mt-4 max-w-[340px] text-sm leading-7 text-white/70">
+          {project.description}
+        </p>
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span

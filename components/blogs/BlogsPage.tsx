@@ -10,13 +10,8 @@ import { blogNavLinks } from "@/constants/navbar";
 
 export function BlogsPage() {
   return (
-    <PageShell overlayOpacity={0.9}>
-      <SiteNav
-        links={blogNavLinks}
-        activeHref="/blogs"
-        ctaHref="/contact-me"
-        ctaLabel="Contact Me"
-      />
+    <PageShell overlayOpacity={0.9} bgIndex={1}>
+      <SiteNav links={blogNavLinks} activeHref="/blogs" />
 
       <Container className="pb-24 pt-[180px]">
         <SectionLabel>Editorial / Insights</SectionLabel>

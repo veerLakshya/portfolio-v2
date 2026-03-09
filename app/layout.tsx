@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { LenisProvider } from "@/components/providers/LenisProvider";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { LenisProvider } from "@/components/providers/LenisProvider";
+import type { Metadata } from "next";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
