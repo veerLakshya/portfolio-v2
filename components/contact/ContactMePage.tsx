@@ -6,23 +6,32 @@ import { PillButton } from "@/components/shared/PillButton";
 export function ContactMePage() {
   return (
     <PageShell overlayOpacity={0.92} className="lg:h-screen lg:overflow-hidden">
-      <header className="fixed top-0 left-0 z-[110] flex w-full items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
+      <header className="fixed top-0 left-0 z-110 flex w-full items-center justify-between px-5 py-5 sm:px-10 sm:py-6 lg:px-20">
         <BrandMark />
 
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-          CLOSE
-        </Link>
+        <PillButton className="hidden sm:inline-flex border-none">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+            CLOSE
+          </Link>
+        </PillButton>
       </header>
 
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         <section className="flex flex-col justify-between border-r-0 border-white/15 px-5 pb-10 pt-28 sm:px-10 lg:border-r lg:px-20 lg:pb-20 lg:pt-20">
-          <div className="mt-10 lg:mt-[100px]">
+          <div className="mt-10 lg:mt-25">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#2dd4bf]/20 bg-[#2dd4bf]/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.05em] text-[#2dd4bf]">
               <span className="contact-pulse h-1.5 w-1.5 rounded-full bg-[#2dd4bf] shadow-[0_0_8px_#2dd4bf]" />
               Available for projects
@@ -34,27 +43,43 @@ export function ContactMePage() {
               conversation.
             </h1>
 
-            <p className="max-w-[400px] text-lg font-light text-white/70">
-              Have a concept or a complex system that needs engineering? Drop a line.
+            <p className="max-w-100 text-lg font-light text-white/70">
+              Have a concept or a complex system that needs engineering? Drop a
+              line.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-10 pt-12 sm:grid-cols-2 lg:pt-0">
             <div>
-              <p className="mb-2 font-mono text-[11px] uppercase text-white/40">Current Location</p>
+              <p className="mb-2 font-mono text-[11px] uppercase text-white/40">
+                Current Location
+              </p>
               <p className="text-base">San Francisco, CA</p>
-              <p className="mt-1 text-[13px] text-white/40">10:42 AM PST (UTC-8)</p>
+              <p className="mt-1 text-[13px] text-white/40">
+                10:42 AM PST (UTC-8)
+              </p>
             </div>
 
             <div>
-              <p className="mb-2 font-mono text-[11px] uppercase text-white/40">Socials</p>
-              <a href="#" className="mb-3 block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]">
+              <p className="mb-2 font-mono text-[11px] uppercase text-white/40">
+                Socials
+              </p>
+              <a
+                href="#"
+                className="mb-3 block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]"
+              >
                 GitHub
               </a>
-              <a href="#" className="mb-3 block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]">
+              <a
+                href="#"
+                className="mb-3 block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]"
+              >
                 LinkedIn
               </a>
-              <a href="#" className="block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]">
+              <a
+                href="#"
+                className="block text-2xl text-white/70 transition-all duration-300 hover:translate-x-2 hover:text-[#d4b895]"
+              >
                 Twitter
               </a>
             </div>
@@ -65,7 +90,9 @@ export function ContactMePage() {
           <div className="mx-auto w-full max-w-[500px]">
             <form>
               <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">NAME</label>
+                <label className="mb-3 block text-[13px] text-white/40">
+                  NAME
+                </label>
                 <input
                   type="text"
                   placeholder="What should I call you?"
@@ -74,7 +101,9 @@ export function ContactMePage() {
               </div>
 
               <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">EMAIL ADDRESS</label>
+                <label className="mb-3 block text-[13px] text-white/40">
+                  EMAIL ADDRESS
+                </label>
                 <input
                   type="email"
                   placeholder="How can I reach you?"
@@ -83,7 +112,9 @@ export function ContactMePage() {
               </div>
 
               <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">SUBJECT</label>
+                <label className="mb-3 block text-[13px] text-white/40">
+                  SUBJECT
+                </label>
                 <input
                   type="text"
                   placeholder="Project inquiry, hello, etc."
@@ -92,7 +123,9 @@ export function ContactMePage() {
               </div>
 
               <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">MESSAGE</label>
+                <label className="mb-3 block text-[13px] text-white/40">
+                  MESSAGE
+                </label>
                 <textarea
                   rows={4}
                   placeholder="Tell me about your project..."
@@ -100,7 +133,11 @@ export function ContactMePage() {
                 />
               </div>
 
-              <PillButton href="#" variant="accent-outline" className="mt-5 px-12 py-4">
+              <PillButton
+                href="#"
+                variant="accent-outline"
+                className="mt-5 px-12 py-4"
+              >
                 Send Message
               </PillButton>
             </form>

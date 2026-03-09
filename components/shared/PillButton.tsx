@@ -4,7 +4,7 @@ import type { MouseEventHandler } from "react";
 type PillButtonVariant = "glass" | "accent-outline";
 
 type PillButtonProps = {
-  href: string;
+  href?: string;
   children: ReactNode;
   secondary?: boolean;
   className?: string;
@@ -28,7 +28,7 @@ export function PillButton({
         : "border border-white/30 bg-white/[0.05] text-white hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/15 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)]";
 
   return (
-    <a
+    <button
       href={href}
       onClick={onClick}
       className={[
@@ -38,6 +38,6 @@ export function PillButton({
       ].join(" ")}
     >
       {children}
-    </a>
+    </button>
   );
 }
