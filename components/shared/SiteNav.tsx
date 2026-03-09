@@ -4,11 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "./BrandMark";
 import { PillButton } from "./PillButton";
-
-export type SiteNavItem = {
-  href: string;
-  label: string;
-};
+import { SiteNavItem } from "@/types/navbar";
 
 type SiteNavProps = {
   links: SiteNavItem[];
@@ -43,21 +39,23 @@ export function SiteNav({
             return (
               <Link
                 key={link.href}
-                  href={link.href}
-                  className={[
-                    "text-sm transition-colors",
-                    isActive ? "text-white" : "text-white/70 hover:text-white",
-                  ].join(" ")}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                href={link.href}
+                className={[
+                  "text-sm transition-colors",
+                  isActive ? "text-white" : "text-white/70 hover:text-white",
+                ].join(" ")}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
             );
           })}
         </div>
 
         <div className="hidden md:block">
-          <PillButton href={ctaHref}>{ctaLabel}</PillButton>
+          <PillButton className="border-none" href={ctaHref}>
+            {ctaLabel}
+          </PillButton>
         </div>
 
         <button
@@ -68,11 +66,25 @@ export function SiteNav({
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           {isMenuOpen ? (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           ) : (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
           )}
@@ -98,7 +110,11 @@ export function SiteNav({
                 </Link>
               );
             })}
-            <PillButton href={ctaHref} className="mt-3 w-fit" onClick={() => setIsMenuOpen(false)}>
+            <PillButton
+              href={ctaHref}
+              className="mt-3 w-fit border-0"
+              onClick={() => setIsMenuOpen(false)}
+            >
               {ctaLabel}
             </PillButton>
           </div>
