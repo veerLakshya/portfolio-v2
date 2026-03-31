@@ -1,7 +1,6 @@
 import React from "react";
 import { socials } from "@/constants/socials";
 import Link from "next/link";
-import { Time } from "./info";
 
 const Footer = () => {
   return (

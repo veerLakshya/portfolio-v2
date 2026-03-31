@@ -120,6 +120,16 @@ html.lenis body {
   animation: contactPulse 2s infinite;
 }
 
+.contact-field:-webkit-autofill,
+.contact-field:-webkit-autofill:hover,
+.contact-field:-webkit-autofill:focus,
+.contact-field:-webkit-autofill:active {
+  background-color: transparent !important;
+  transition:
+    background-color 9999s ease-out 0s,
+    color 9999s ease-out 0s;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

@@ -16,12 +16,14 @@ type PillLinkProps = BasePillButtonProps & {
   href: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
   type?: never;
+  disabled?: never;
 };
 
 type PillActionProps = BasePillButtonProps & {
   href?: undefined;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
+  disabled?: ButtonHTMLAttributes<HTMLButtonElement>["disabled"];
 };
 
 type PillButtonProps = PillLinkProps | PillActionProps;
@@ -34,6 +36,7 @@ export function PillButton({
   variant = "glass",
   onClick,
   type = "button",
+  disabled,
 }: PillButtonProps) {
   const variantClass =
     variant === "accent-outline"
@@ -73,7 +76,12 @@ export function PillButton({
     onClick as MouseEventHandler<HTMLButtonElement> | undefined;
 
   return (
-    <button type={type} onClick={buttonOnClick} className={sharedClassName}>
+    <button
+      type={type}
+      onClick={buttonOnClick}
+      className={sharedClassName}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

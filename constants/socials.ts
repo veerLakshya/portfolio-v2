@@ -9,6 +9,6 @@ export const socials = [
   },
   {
     name: "Twitter",
-    href: "https://www.twitter.com/lakshyacodess",
+    href: "https://www.twitter.com/veerlakshya",
   },
 ];

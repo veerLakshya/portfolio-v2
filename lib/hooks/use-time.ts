@@ -1,21 +1,18 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export function useTime() {
-  const [time, setTime] = useState('');
-  const [mounted, setMounted] = useState(false);
+  const [time, setTime] = useState("");
 
   useEffect(() => {
-    setMounted(true);
-
     const updateTime = () => {
       const now = new Date();
       setTime(
-        now.toLocaleString('en-US', {
-          hour: 'numeric',
-          minute: 'numeric',
-          second: 'numeric',
+        now.toLocaleString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
           hour12: true,
         })
       );
@@ -26,11 +23,6 @@ export function useTime() {
 
     return () => clearInterval(interval);
   }, []);
-
-  // Return empty string during SSR
-  if (!mounted) {
-    return '';
-  }
 
   return time;
 }

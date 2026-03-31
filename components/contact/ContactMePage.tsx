@@ -1,8 +1,8 @@
 import { PageShell } from "@/components/shared/PageShell";
-import { PillButton } from "@/components/shared/PillButton";
 import Footer from "../shared/Footer";
 import { SiteNav } from "../shared/SiteNav";
 import { homeNavLinks } from "@/constants/navbar";
+import { ContactForm } from "./ContactForm";
 
 export function ContactMePage() {
   return (
@@ -32,7 +32,7 @@ export function ContactMePage() {
           CLOSE
         </PillButton>
       </header> */}
-      <SiteNav hideLinks activeHref="/contact" links={homeNavLinks} />
+      <SiteNav hideLinks activeHref="/contact-me" links={homeNavLinks} />
 
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         <section className="flex flex-col justify-between border-r-0 border-white/15 px-5 pb-10 pt-28 sm:px-10 lg:border-r lg:px-20 lg:pb-20 lg:pt-20">
@@ -59,59 +59,7 @@ export function ContactMePage() {
 
         <section className="flex flex-col justify-center bg-white/2 px-5 py-10 backdrop-blur-[10px] sm:px-10 lg:px-20">
           <div className="mx-auto w-full max-w-125">
-            <form>
-              <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">
-                  NAME
-                </label>
-                <input
-                  type="text"
-                  placeholder="What should I call you?"
-                  className="w-full border-0 border-b border-white/15 bg-transparent py-3 text-base text-white outline-none transition-colors placeholder:text-white/40 focus:border-[#d4b895]"
-                />
-              </div>
-
-              <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">
-                  EMAIL ADDRESS
-                </label>
-                <input
-                  type="email"
-                  placeholder="How can I reach you?"
-                  className="w-full border-0 border-b border-white/15 bg-transparent py-3 text-base text-white outline-none transition-colors placeholder:text-white/40 focus:border-[#d4b895]"
-                />
-              </div>
-
-              <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">
-                  SUBJECT
-                </label>
-                <input
-                  type="text"
-                  placeholder="Project inquiry, hello, etc."
-                  className="w-full border-0 border-b border-white/15 bg-transparent py-3 text-base text-white outline-none transition-colors placeholder:text-white/40 focus:border-[#d4b895]"
-                />
-              </div>
-
-              <div className="mb-8">
-                <label className="mb-3 block text-[13px] text-white/40">
-                  MESSAGE
-                </label>
-                <textarea
-                  rows={4}
-                  placeholder="Tell me about your project..."
-                  className="w-full resize-none border-0 border-b border-white/15 bg-transparent py-3 text-base text-white outline-none transition-colors placeholder:text-white/40 focus:border-[#d4b895]"
-                />
-              </div>
-
-              <PillButton
-                type="submit"
-                variant="accent-outline"
-                className="mt-5 px-12 py-4"
-              >
-                Send Message
-              </PillButton>
-            </form>
+            <ContactForm />
           </div>
         </section>
       </div>
