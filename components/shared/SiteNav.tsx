@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "./BrandMark";
-import { PillButton } from "./PillButton";
 import { SiteNavItem } from "@/types/navbar";
 import { Time } from "./info";
 
@@ -25,7 +24,7 @@ export function SiteNav({
   return (
     <nav
       className={[
-        "fixed top-0 left-0 z-[100] w-full",
+        "fixed top-0 left-0 z-100 w-full",
         blendOverlay ? "mix-blend-overlay" : "",
       ].join(" ")}
     >

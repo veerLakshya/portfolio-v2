@@ -13,10 +13,10 @@ export function BlogsPage() {
     <PageShell overlayOpacity={0.9} bgIndex={1}>
       <SiteNav links={blogNavLinks} activeHref="/blogs" />
 
-      <Container className="pb-24 pt-[180px]">
+      <Container className="pb-24 pt-45">
         <SectionLabel>Editorial / Insights</SectionLabel>
 
-        <section className="grid grid-cols-1 items-center gap-10 rounded-sm border border-white/15 bg-white/[0.03] p-8 backdrop-blur-xl lg:grid-cols-[1.2fr_1fr] lg:gap-[60px] lg:p-[60px]">
+        <section className="grid grid-cols-1 items-center gap-10 rounded-sm border border-white/15 bg-white/3 p-8 backdrop-blur-xl lg:grid-cols-[1.2fr_1fr] lg:gap-15 lg:p-15">
           <div>
             <div className="mb-4 flex gap-5 font-mono text-xs text-[#d4b895]">
               <span>{featuredPost.date}</span>
@@ -32,7 +32,7 @@ export function BlogsPage() {
             <PillButton href="#">Read full article</PillButton>
           </div>
 
-          <div className="min-h-[300px] overflow-hidden border border-white/15 bg-black/20">
+          <div className="min-h-75 overflow-hidden border border-white/15 bg-black/20">
             <Image
               src={featuredPost.image}
               alt="Code Visualization"

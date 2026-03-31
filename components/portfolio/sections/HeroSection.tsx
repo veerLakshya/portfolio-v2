@@ -3,18 +3,18 @@ import { SectionLabel } from "@/components/shared/SectionLabel";
 
 export function HeroSection() {
   return (
-    <section className="mx-auto grid min-h-screen w-full max-w-[1400px] items-center px-5 pt-24 2xl:pt-0 sm:px-10 xl:px-20">
-      <div className="grid w-full gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end lg:gap-[60px]">
+    <section className="mx-auto grid min-h-screen w-full max-w-350 items-center px-5 pt-24 2xl:pt-0 sm:px-10 xl:px-20">
+      <div className="grid w-full gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end lg:gap-15">
         <div>
           <SectionLabel className="fade-in">Software Engineer</SectionLabel>
-          <h1 className="fade-in delay-1 bg-gradient-to-b from-white to-[#dcdcdc] bg-clip-text text-[52px] leading-[0.95] tracking-[-0.03em] text-transparent sm:text-[70px] lg:text-[96px]">
+          <h1 className="fade-in delay-1 bg-linear-to-b from-white to-[#dcdcdc] bg-clip-text text-[52px] leading-[0.95] tracking-[-0.03em] text-transparent sm:text-[70px] lg:text-[96px]">
             Building things
             <br />
             that matter.
           </h1>
         </div>
         <div className="fade-in delay-2 pb-3">
-          <p className="mb-8 max-w-[400px] text-lg leading-8 text-white/70">
+          <p className="mb-8 max-w-100 text-lg leading-8 text-white/70">
             Architecting ideas with precision, performance, and purpose. From
             just a thought to a fully functional product, I bring ideas to life.
           </p>

@@ -6,7 +6,7 @@ export function StackSection() {
   return (
     <section
       id="stack"
-      className="mx-auto w-full max-w-[1400px] px-5 py-28 sm:px-10 lg:py-40 xl:px-20"
+      className="mx-auto w-full max-w-350 px-5 py-28 sm:px-10 lg:py-40 xl:px-20"
     >
       <SectionLabel>Technical Architecture</SectionLabel>
       <h2 className="text-4xl leading-[1.1] tracking-[-0.03em] lg:text-5xl">

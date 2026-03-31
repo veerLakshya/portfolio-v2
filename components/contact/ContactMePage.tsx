@@ -1,4 +1,3 @@
-import { BrandMark } from "@/components/shared/BrandMark";
 import { PageShell } from "@/components/shared/PageShell";
 import { PillButton } from "@/components/shared/PillButton";
 import Footer from "../shared/Footer";
@@ -37,7 +36,7 @@ export function ContactMePage() {
 
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         <section className="flex flex-col justify-between border-r-0 border-white/15 px-5 pb-10 pt-28 sm:px-10 lg:border-r lg:px-20 lg:pb-20 lg:pt-20">
-          <div className="mt-10 lg:mt-[100px]">
+          <div className="mt-10 lg:mt-25">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#2dd4bf]/20 bg-[#2dd4bf]/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.05em] text-[#2dd4bf]">
               <span className="contact-pulse h-1.5 w-1.5 rounded-full bg-[#2dd4bf] shadow-[0_0_8px_#2dd4bf]" />
               Available for projects
@@ -49,7 +48,7 @@ export function ContactMePage() {
               conversation.
             </h1>
 
-            <p className="max-w-[400px] text-lg font-light text-white/70">
+            <p className="max-w-100 text-lg font-light text-white/70">
               Have a concept or a complex system that needs engineering? Drop a
               line.
             </p>
@@ -58,8 +57,8 @@ export function ContactMePage() {
           <Footer />
         </section>
 
-        <section className="flex flex-col justify-center bg-white/[0.02] px-5 py-10 backdrop-blur-[10px] sm:px-10 lg:px-20">
-          <div className="mx-auto w-full max-w-[500px]">
+        <section className="flex flex-col justify-center bg-white/2 px-5 py-10 backdrop-blur-[10px] sm:px-10 lg:px-20">
+          <div className="mx-auto w-full max-w-125">
             <form>
               <div className="mb-8">
                 <label className="mb-3 block text-[13px] text-white/40">
