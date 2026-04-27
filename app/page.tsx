@@ -39,16 +39,11 @@ export default function Home() {
       />
       <script
         src="https://flam-fantom-dev.vercel.app/v1/loader.js"
-        data-project-id="69df94e3282b0f76084ee2bb"
-        data-client-key="ak_4dab7931c5dcd30a"
-        async
-      ></script>
-      <script
-        src="https://flam-fantom-dev.vercel.app/v1/loader.js"
         data-project-id="69dded7f51ac02b5ed2d14bd"
         data-client-key="ak_a016544d601cec37"
         async
       ></script>
+
       <PortfolioPage />
     </>
   );
