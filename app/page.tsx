@@ -37,6 +37,12 @@ export default function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
+      <script
+        src="https://flam-fantom-dev.vercel.app/v1/loader.js"
+        data-project-id="69dded7f51ac02b5ed2d14bd"
+        data-client-key="ak_a016544d601cec37"
+        async
+      ></script>
       <PortfolioPage />
     </>
   );
