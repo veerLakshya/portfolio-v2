@@ -25,7 +25,7 @@ export function PortfolioPage() {
         <StackSection />
         <ExperienceSection />
         <ContactSection />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </PageShell>
   );
